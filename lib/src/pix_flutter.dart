@@ -57,18 +57,15 @@ class PixFlutter {
               this.payload!.url!.replaceAll('https://', ''))
           : '';
 
-      /// Há um erro no API que impede o uso de descrição, justificando assim os comments abaixo. Assim que estes bugs forem consertados, o código voltará ao funcionamento completo.
-      // final description = getValue(
-      //     idMerchantAccountInformationDescription,
-      //     this.payload!.description
-      // );
+      final description = getValue(
+          idMerchantAccountInformationDescription,
+          this.payload!.description
+      );
 
-      // return getValue(
-      //     idMerchantAccountInformation,
-      //     "$gui$key$description"
-      // );
-
-      return getValue(idMerchantAccountInformation, "$gui$key$url");
+      return getValue(
+          idMerchantAccountInformation,
+          "$gui$key$description"
+      );
     }
 
     /// Formata o txid
